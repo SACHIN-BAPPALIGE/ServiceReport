@@ -343,7 +343,7 @@ def restart_service(service):
 
 
 def update_grub():
-    command = ["grub2-mkconfig", "-o", "/boot/grub2/grub.cfg"]
+    command = ["grub2-mkconfig", "-o", "/boot/grub2/grub.cfg", "--update-bls-cmdline"]
 
     return_code = execute_command(command)[0]
     if return_code == 0:
